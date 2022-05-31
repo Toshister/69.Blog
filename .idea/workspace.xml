@@ -4,8 +4,9 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04084895-d5fa-42bb-b637-a787b5da3ab6" name="Changes" comment="Add ability to use SQLite on the local machine and Postgres on the server.">
+    <list default="true" id="04084895-d5fa-42bb-b637-a787b5da3ab6" name="Changes" comment="Fix main.py for working with Postgresql">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog.db" beforeDir="false" afterPath="$PROJECT_DIR$/blog.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,7 +52,6 @@
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
-        <env name="SECRET_KEY" value="8BYkEfBA6O6donzWlSihBXox7C0sKR6b" />
       </envs>
       <option name="SDK_HOME" value="/Library/Frameworks/Python.framework/Versions/3.10/bin/python3" />
       <option name="WORKING_DIRECTORY" value="" />
@@ -159,7 +159,7 @@
       <workItem from="1653671218230" duration="18744000" />
       <workItem from="1653820314661" duration="7708000" />
       <workItem from="1653982388608" duration="4085000" />
-      <workItem from="1654017568549" duration="552000" />
+      <workItem from="1654017568549" duration="1048000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1653982754607</created>
@@ -196,7 +196,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654016776970</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Fix main.py for working with Postgresql">
+      <created>1654018631600</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1654018631600</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -218,11 +225,12 @@
     <MESSAGE value="Add gunicorn" />
     <MESSAGE value="Add Postgre migration" />
     <MESSAGE value="Add ability to use SQLite on the local machine and Postgres on the server." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add ability to use SQLite on the local machine and Postgres on the server." />
+    <MESSAGE value="Fix main.py for working with Postgresql" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix main.py for working with Postgresql" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/69___Blog__with_adding_new_users_$Flask__main_py_.coverage" NAME="Flask (main.py) Coverage Results" MODIFIED="1653594614421" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/69___Blog__with_adding_new_users_$Flask__main_py___1_.coverage" NAME="Flask (main.py) (1) Coverage Results" MODIFIED="1654016795573" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/69___Blog__with_adding_new_users_$69___Blog_with_adding_new_users.coverage" NAME="69 - Blog with adding new users Coverage Results" MODIFIED="1654018029298" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/69___Blog__with_adding_new_users_$69___Blog_with_adding_new_users.coverage" NAME="69 - Blog with adding new users Coverage Results" MODIFIED="1654018721919" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>
