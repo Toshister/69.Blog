@@ -4,7 +4,10 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04084895-d5fa-42bb-b637-a787b5da3ab6" name="Changes" comment="Add gunicorn" />
+    <list default="true" id="04084895-d5fa-42bb-b637-a787b5da3ab6" name="Changes" comment="Add gunicorn">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -137,7 +140,7 @@
       <workItem from="1653593971835" duration="756000" />
       <workItem from="1653671218230" duration="18744000" />
       <workItem from="1653820314661" duration="7708000" />
-      <workItem from="1653982388608" duration="3062000" />
+      <workItem from="1653982388608" duration="3582000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1653982754607</created>
@@ -153,7 +156,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654013944649</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Add gunicorn">
+      <created>1654014185553</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1654014185553</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
