@@ -68,7 +68,7 @@ class Comment(db.Model):
     comment = db.Column(db.Text, nullable=False)
 
 
-# db.create_all()
+db.create_all()
 
 
 # Creating login-manager
@@ -78,7 +78,7 @@ login_manager.init_app(app)
 
 @login_manager.user_loader
 def load_user(user_id):
-    return User.query.get(int(user_id))
+    return User.query.get(user_id)
 
 
 # Decorator for closing access to straight path to creating/deleting posts for unauthorised users.
@@ -228,5 +228,3 @@ def delete_post(post_id):
 
 if __name__ == "__main__":
     app.run(debug=True)
-    port = int(os.environ.get('PORT', 5000))
-    app.run(host='0.0.0.0', port=port)
