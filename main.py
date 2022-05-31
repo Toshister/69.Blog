@@ -197,7 +197,7 @@ def add_new_post():
 @login_required
 @admin_only
 def edit_post(post_id):
-    post = BlogPost.query.get(int(post_id))
+    post = BlogPost.query.get(post_id)
     edit_form = CreatePostForm(
         title=post.title,
         subtitle=post.subtitle,
