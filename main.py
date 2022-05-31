@@ -146,7 +146,7 @@ def logout():
     return redirect(url_for('get_all_posts'))
 
 
-@app.route("/post/<int:post_id>", methods=['POST', 'GET'])
+@app.route("/post/<post_id>", methods=['POST', 'GET'])
 def show_post(post_id):
     comment_form = CommentForm()
     requested_post = BlogPost.query.get(post_id)
@@ -215,7 +215,7 @@ def edit_post(post_id):
     return render_template("make-post.html", form=edit_form)
 
 
-@app.route("/delete/<int:post_id>")
+@app.route("/delete/<post_id>")
 @login_required
 @admin_only
 def delete_post(post_id):
