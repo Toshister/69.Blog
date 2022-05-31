@@ -10,7 +10,6 @@ from forms import CreatePostForm, RegisterForm, LoginForm, CommentForm
 from flask_gravatar import Gravatar
 from functools import wraps
 import os
-import psycopg2
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
@@ -68,7 +67,7 @@ class Comment(db.Model):
     comment = db.Column(db.Text, nullable=False)
 
 
-db.create_all()
+# db.create_all()
 
 
 # Creating login-manager
@@ -78,7 +77,7 @@ login_manager.init_app(app)
 
 @login_manager.user_loader
 def load_user(user_id):
-    return User.query.get(int(user_id))
+    return User.query.get(user_id)
 
 
 # Decorator for closing access to straight path to creating/deleting posts for unauthorised users.
@@ -157,7 +156,7 @@ def show_post(post_id):
                               comment=comment_form.comment.data)
         db.session.add(new_comment)
         db.session.commit()
-        return redirect(url_for('show_post', post_id=int(requested_post.id)))
+        return redirect(url_for('show_post', post_id=requested_post.id))
     if comment_form.validate_on_submit() and not current_user.is_authenticated:
         flash('You need to login or sign up to write a comment.')
         return redirect(url_for('login'))
@@ -210,7 +209,6 @@ def edit_post(post_id):
         post.title = edit_form.title.data
         post.subtitle = edit_form.subtitle.data
         post.img_url = edit_form.img_url.data
-        # post.author = edit_form.author.data
         post.body = edit_form.body.data
         db.session.commit()
         return redirect(url_for("show_post", post_id=post.id))
