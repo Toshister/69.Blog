@@ -13,6 +13,7 @@ import os
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = '8BYkEfBA6O6donzWlSihBXox7C0sKR6b'
+app.config['DEBUG'] = True
 ckeditor = CKEditor(app)
 Bootstrap(app)
 
@@ -67,7 +68,7 @@ class Comment(db.Model):
     comment = db.Column(db.Text, nullable=False)
 
 
-db.create_all()
+# db.create_all()
 
 
 # Creating login-manager
@@ -111,7 +112,7 @@ def register():
         else:
             registered_user = User(email=email,
                                    password=password,
-                                   name=name
+                                   name=name,
                                    )
             db.session.add(registered_user)
             db.session.commit()
