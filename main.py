@@ -78,7 +78,7 @@ login_manager.init_app(app)
 
 @login_manager.user_loader
 def load_user(user_id):
-    return User.query.get(user_id)
+    return User.query.get(int(user_id))
 
 
 # Decorator for closing access to straight path to creating/deleting posts for unauthorised users.
